@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4D Academic - 4000 Essential English Words Edition</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Merriweather"', 'serif'],
+          },
+          colors: {
+            brand: {
+              blue: '#0d3880',
+              accent: '#2563eb',
+              gold: '#f59e0b',
+              dark: '#0a0a0c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1e293b;
+    }
+    .serif-text {
+      font-family: 'Merriweather', serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    .word-card {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .word-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+    .highlight-active {
+      background-color: #fef08a !important;
+      color: #0f172a !important;
+      border-radius: 6px;
+      padding: 3px 8px;
+      box-shadow: 0 0 0 2px #facc15;
+      transition: background-color 0.2s ease;
+    }
+    .perspective {
+      perspective: 1000px;
+    }
+    .card-inner {
+      transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .is-flipped {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <header class="bg-black text-white border-b border-neutral-800 sticky top-0 z-50 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Authentic 4D Academic vector logo -->
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-3 bg-neutral-900/90 py-1.5 px-3 rounded-xl border border-neutral-800 shadow-inner">
+            <svg class="w-10 h-10 shrink-0 drop-shadow-md" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="160" height="160" rx="16" fill="#0D3880"/>
+              <!-- Arrow pointing upwards -->
+              <path d="M80 14 L105 48 L55 48 Z" fill="#FFFFFF"/>
+              <!-- 4D Main Glyph -->
+              <path d="M52 52 L32 86 H56 V108 H68 V86 H78 V76 H68 V52 H52 Z M54 76 H43 L54 58 V76 Z" fill="#FFFFFF"/>
+              <path d="M78 52 H100 C112 52 121 61 121 80 C121 99 112 108 100 108 H78 V52 Z M90 62 V98 H99 C105 98 109 91 109 80 C109 69 105 62 99 62 H90 Z" fill="#FFFFFF"/>
+              <!-- ACADEMIC text -->
+              <text x="80" y="125" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="14.5" text-anchor="middle" letter-spacing="2">ACADEMIC</text>
+              <!-- 4 Skills trapezoid bar -->
+              <polygon points="30,146 130,146 122,132 38,132" fill="#FFFFFF"/>
+              <!-- Listening Ear Icon -->
+              <path d="M47 138 C46 136 46 134 48 134 C50 134 51 135 50 137 C49 139 50 140 51 141" stroke="#0D3880" stroke-width="1.3" stroke-linecap="round"/>
+              <line x1="56" y1="133" x2="56" y2="145" stroke="#0D3880" stroke-width="0.8"/>
+              <!-- Speaking Icon -->
+              <path d="M68 135 C71 135 73 137 73 139 C73 141 71 142 68 142" stroke="#0D3880" stroke-width="1.3" fill="none"/>
+              <path d="M75 134 C77 136 77 140 75 142" stroke="#0D3880" stroke-width="1.3" fill="none"/>
+              <line x1="81" y1="133" x2="81" y2="145" stroke="#0D3880" stroke-width="0.8"/>
+              <!-- Reading Book Icon -->
+              <path d="M89 135 C92 134 96 134 98 135 V142 C96 141 92 141 89 142 Z M89 135 C86 134 82 134 80 135 V142 C82 141 86 141 89 142 Z" fill="#0D3880"/>
+              <line x1="104" y1="133" x2="104" y2="145" stroke="#0D3880" stroke-width="0.8"/>
+              <!-- Writing Pen Icon -->
+              <path d="M112 134 L115 137 L110 142 H108 V140 L112 134 Z" fill="#0D3880"/>
+            </svg>
+            <div>
+              <div class="flex items-center space-x-1.5">
+                <span class="text-base font-extrabold tracking-wider text-white">4D ACADEMIC</span>
+                <span class="text-[10px] uppercase font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded">UNIT 2</span>
+              </div>
+              <p class="text-xs text-neutral-400 tracking-tight font-medium">4000 Essential English Words Edition</p>
+            </div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-1 bg-neutral-900 p-1.5 rounded-xl border border-neutral-800">
+          <button onclick="switchTab('wordlist')" id="tabBtn-wordlist" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-white bg-blue-600 shadow-md">
+            <i class="fa-solid fa-book-bookmark mr-2 text-xs"></i>Word List
+          </button>
+          <button onclick="switchTab('reading')" id="tabBtn-reading" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-neutral-400 hover:text-white hover:bg-neutral-800">
+            <i class="fa-solid fa-newspaper mr-2 text-xs"></i>Reading Passages
+          </button>
+          <button onclick="switchTab('exercises')" id="tabBtn-exercises" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-neutral-400 hover:text-white hover:bg-neutral-800">
+            <i class="fa-solid fa-spell-check mr-2 text-xs"></i>Comprehension Quiz
+          </button>
+          <button onclick="switchTab('flashcards')" id="tabBtn-flashcards" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 text-neutral-400 hover:text-white hover:bg-neutral-800">
+            <i class="fa-solid fa-clone mr-2 text-xs"></i>Flashcards
+          </button>
+        </nav>
+
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <div class="relative">
+            <button onclick="toggleVoiceMenu()" id="voiceSelectorBtn" class="flex items-center space-x-2 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 py-1.5 px-3 rounded-lg text-neutral-200 transition shadow-inner">
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-cloud text-sky-400 text-xs animate-pulse"></i>
+                <span id="voiceStatusDot" class="inline-block w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+              </span>
+              <span id="activeVoiceLabel" class="font-semibold text-white">Achird &bull; Warm Cloud</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-neutral-400 ml-1"></i>
+            </button>
+
+            <!-- Voice Selection Menu -->
+            <div id="voiceDropdown" class="hidden absolute right-0 mt-2 w-72 bg-neutral-950 border border-neutral-800 rounded-xl shadow-2xl py-2 z-50 text-left">
+              <div class="px-3.5 py-2 text-[11px] font-bold text-neutral-400 uppercase tracking-wider border-b border-neutral-800 flex justify-between items-center bg-neutral-900/60">
+                <span class="flex items-center gap-1.5 text-white">
+                  <i class="fa-solid fa-cloud text-sky-400"></i> Cloud Neural Voices
+                </span>
+                <span class="text-[10px] bg-sky-500/20 text-sky-300 border border-sky-500/30 px-1.5 py-0.5 rounded">High Fidelity</span>
+              </div>
+              
+              <button onclick="selectVoice('Achird', 'Achird • Warm Cloud', 'Say in a warm, relaxed, humanized conversational tone, like a friendly and caring teacher speaking directly to their student: ')" class="w-full text-left px-3.5 py-2.5 text-xs hover:bg-neutral-800/80 text-neutral-200 flex items-center justify-between transition border-b border-neutral-800/40">
+                <div>
+                  <div class="font-bold text-white flex items-center gap-1.5">
+                    <span>Achird</span>
+                    <span class="text-[10px] bg-amber-400/20 text-amber-300 px-1.5 rounded">Warm</span>
+                  </div>
+                  <div class="text-[11px] text-neutral-400">Conversational, empathetic tutor</div>
+                </div>
+                <i class="fa-solid fa-check text-sky-400 text-xs" id="check-Achird"></i>
+              </button>
+              
+              <button onclick="selectVoice('Callirrhoe', 'Callirrhoe • Natural Flow', 'Say in a clear, easy-going, relaxed natural human voice with genuine pauses: ')" class="w-full text-left px-3.5 py-2.5 text-xs hover:bg-neutral-800/80 text-neutral-200 flex items-center justify-between transition border-b border-neutral-800/40">
+                <div>
+                  <div class="font-bold text-white">Callirrhoe</div>
+                  <div class="text-[11px] text-neutral-400">Casual everyday natural flow</div>
+                </div>
+                <i class="fa-solid fa-check text-sky-400 text-xs hidden" id="check-Callirrhoe"></i>
+              </button>
+              
+              <button onclick="selectVoice('Puck', 'Puck • Energetic Coach', 'Speak in an upbeat, cheerful, highly energetic and inspiring human tone: ')" class="w-full text-left px-3.5 py-2.5 text-xs hover:bg-neutral-800/80 text-neutral-200 flex items-center justify-between transition border-b border-neutral-800/40">
+                <div>
+                  <div class="font-bold text-white">Puck</div>
+                  <div class="text-[11px] text-neutral-400">Upbeat, lively, motivational pacing</div>
+                </div>
+                <i class="fa-solid fa-check text-sky-400 text-xs hidden" id="check-Puck"></i>
+              </button>
+
+              <button onclick="selectVoice('Aoede', 'Aoede • Breezy & Expressive', 'Speak in a breezy, expressive, engaging and lively conversational style: ')" class="w-full text-left px-3.5 py-2.5 text-xs hover:bg-neutral-800/80 text-neutral-200 flex items-center justify-between transition border-b border-neutral-800/40">
+                <div>
+                  <div class="font-bold text-white">Aoede</div>
+                  <div class="text-[11px] text-neutral-400">Expressive, rhythmic cadence</div>
+                </div>
+                <i class="fa-solid fa-check text-sky-400 text-xs hidden" id="check-Aoede"></i>
+              </button>
+
+              <button onclick="selectVoice('Zephyr', 'Zephyr • Bright & Clear', 'Speak in a bright, crystal-clear, articulate, and friendly educational voice: ')" class="w-full text-left px-3.5 py-2.5 text-xs hover:bg-neutral-800/80 text-neutral-200 flex items-center justify-between transition">
+                <div>
+                  <div class="font-bold text-white">Zephyr</div>
+                  <div class="text-[11px] text-neutral-400">Bright, crisp, and articulate speech</div>
+                </div>
+                <i class="fa-solid fa-check text-sky-400 text-xs hidden" id="check-Zephyr"></i>
+              </button>
+            </div>
+          </div>
+
+          <button onclick="testHumanizedVoice()" title="Preview Humanized Speech" class="flex items-center gap-1.5 py-1.5 px-3 bg-neutral-900 hover:bg-neutral-800 text-sky-400 hover:text-sky-300 rounded-lg border border-neutral-700 transition text-xs font-semibold">
+            <i class="fa-solid fa-ear-listen text-xs"></i>
+            <span class="hidden sm:inline">Preview</span>
+          </button>
+          
+          <button onclick="toggleAudioSpeed()" id="speedBtn" class="text-xs font-bold bg-neutral-800 hover:bg-neutral-700 text-neutral-200 py-1.5 px-3 rounded-lg border border-neutral-700 transition">
+            1.0x Speed
+          </button>
+        </div>
+
+      </div>
+      
+      <div class="flex md:hidden overflow-x-auto py-2.5 space-x-2 border-t border-neutral-800 custom-scrollbar">
+        <button onclick="switchTab('wordlist')" id="mobile-tabBtn-wordlist" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-blue-600">
+          <i class="fa-solid fa-book-bookmark mr-1"></i> Words
+        </button>
+        <button onclick="switchTab('reading')" id="mobile-tabBtn-reading" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-bold text-neutral-300 bg-neutral-900">
+          <i class="fa-solid fa-newspaper mr-1"></i> Reading
+        </button>
+        <button onclick="switchTab('exercises')" id="mobile-tabBtn-exercises" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-bold text-neutral-300 bg-neutral-900">
+          <i class="fa-solid fa-spell-check mr-1"></i> Practice
+        </button>
+        <button onclick="switchTab('flashcards')" id="mobile-tabBtn-flashcards" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-bold text-neutral-300 bg-neutral-900">
+          <i class="fa-solid fa-clone mr-1"></i> Cards
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    <section class="bg-white rounded-2xl p-6 sm:p-8 mb-8 border border-slate-200 shadow-sm relative overflow-hidden">
+      <div class="absolute -right-12 -top-12 w-48 h-48 bg-blue-50 rounded-full opacity-60 pointer-events-none"></div>
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full mb-3 border border-blue-100">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Unit 2 &bull; Learning Styles & Techniques</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Different Ways People Learn
+          </h1>
+          <p class="mt-2 text-slate-600 max-w-2xl text-base leading-relaxed">
+            Master 12 essential target words with clear definitions, illustrative example sentences, energetic spoken audio, and engaging practice exercises.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="playAllWordsSequentially()" id="playAllBtn" class="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm px-5 py-3 rounded-xl shadow-md transition active:scale-95">
+            <i class="fa-solid fa-play text-amber-400"></i>
+            <span>Listen to Word List</span>
+          </button>
+          <button onclick="switchTab('reading'); narratePassage('story1');" class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-5 py-3 rounded-xl shadow-md transition active:scale-95">
+            <i class="fa-solid fa-headphones"></i>
+            <span>Read & Listen Story</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div id="section-wordlist" class="tab-content">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 mb-6 gap-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <span>Word List</span>
+            <span class="text-xs bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded-full border border-slate-200">12 Words</span>
+            <span class="text-[11px] bg-sky-50 text-sky-700 font-bold px-2.5 py-0.5 rounded-full border border-sky-200 flex items-center gap-1">
+              <i class="fa-solid fa-cloud text-[10px]"></i> Cloud Audio
+            </span>
+          </h2>
+          <p class="text-sm text-slate-500">Each entry includes phonetic pronunciation, part of speech, clear definition, and context sentence.</p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="text" id="wordSearch" onkeyup="filterWords()" placeholder="Search word or Arabic..." class="text-sm px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white shadow-sm w-48 sm:w-64">
+        </div>
+      </div>
+
+      <div id="wordGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </div>
+
+    <div id="section-reading" class="tab-content hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="lg:col-span-2 space-y-8">
+          <!-- Story 1: Different Ways People Learn -->
+          <article class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 relative">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-bold tracking-widest uppercase text-blue-600">Lesson 1 &bull; SB Page 29</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">"Different Ways People Learn"</h3>
+              </div>
+              <div class="flex items-center space-x-2">
+                <button onclick="narratePassage('story1')" id="story1-audio-btn" class="flex items-center space-x-2 bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold px-4 py-2 rounded-xl text-sm transition border border-blue-200">
+                  <i class="fa-solid fa-volume-high text-blue-600"></i>
+                  <span>Play Passage</span>
+                </button>
+                <button onclick="stopNarration()" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100" title="Stop audio">
+                  <i class="fa-solid fa-stop"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/50 rounded-xl border border-blue-100/70 flex items-center justify-between gap-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl shadow">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-800 text-sm">Three Key Learning Styles</h4>
+                  <p class="text-xs text-slate-500">Visual (seeing) &bull; Auditory (hearing) &bull; Kinesthetic (moving & doing)</p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold bg-white text-blue-800 px-3 py-1 rounded-full border border-blue-200 shadow-xs hidden sm:inline-block">
+                Core Text
+              </span>
+            </div>
+
+            <div id="story1-text" class="serif-text text-base sm:text-lg text-slate-800 leading-relaxed space-y-4">
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                Every person learns <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('different')">differently</strong>. Some people learn best by seeing information. These are <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('visual')">visual</strong> learners. They like to read books, look at pictures, and use colorful notes. Visual learners often make maps and <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('chart')">charts</strong> to <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('organize')">organize</strong> information.
+              </p>
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                Other people learn best by hearing information. These are <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('auditory')">auditory</strong> learners. They like to listen to music while studying, discuss topics with friends, and hear explanations from teachers. Auditory learners often repeat information out loud to remember it.
+              </p>
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                Some people learn best by moving and touching. These are <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('kinesthetic')">kinesthetic</strong> learners. They like to do <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('experiment')">experiments</strong>, build models, and take breaks to move around. Kinesthetic learners often use their hands to help them think.
+              </p>
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                Understanding your learning style helps you study better. When you know how you learn best, you can choose the right <strong class="text-blue-700 font-bold bg-blue-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('method')">methods</strong> for yourself. This makes learning easier and more enjoyable.
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Tip: Click on any sentence to hear it read out loud in realistic speech.</span>
+              <span class="text-blue-600 font-semibold cursor-pointer" onclick="narratePassage('story1')"><i class="fa-solid fa-play mr-1"></i>Listen to Full Passage</span>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-100">
+              <div>
+                <span class="text-xs font-bold tracking-widest uppercase text-emerald-600">Lesson 2 &bull; SB Page 30</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Ahmed's Study Habits & Techniques</h3>
+              </div>
+              <div class="flex items-center space-x-2">
+                <button onclick="narratePassage('story2')" id="story2-audio-btn" class="flex items-center space-x-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold px-4 py-2 rounded-xl text-sm transition border border-emerald-200">
+                  <i class="fa-solid fa-volume-high text-emerald-600"></i>
+                  <span>Play Audio</span>
+                </button>
+                <button onclick="stopNarration()" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100" title="Stop audio">
+                  <i class="fa-solid fa-stop"></i>
+                </button>
+              </div>
+            </div>
+
+            <div id="story2-text" class="serif-text text-base sm:text-lg text-slate-800 leading-relaxed space-y-4">
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                Learning how to learn is one of the most important <strong class="text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('skill')">skills</strong> for students. Every person has a different learning style. Some students learn best by reading, others by listening, and some by doing activities.
+              </p>
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                The key is to find your own style that works. Good learners don't just <strong class="text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('memorize')">memorize</strong> information—they understand it. They ask questions, take notes, and review regularly. When studying becomes difficult, good learners take breaks and try different methods. The most successful students are those who never stop trying to improve their learning techniques.
+              </p>
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                Hi, I'm Ahmed, a 12-year-old student. I've learned how to study better this year. First, I organize my notes in <strong class="text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('organize')">folders</strong> so I can find them easily. I also make a <strong class="text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('schedule')">study schedule</strong> every week. This helps me focus on one subject at a time. My teacher says good study habits are important for success.
+              </p>
+              <p class="sentence p-1.5 rounded cursor-pointer transition hover:bg-slate-100" onclick="speakText(this.innerText)">
+                For example, I study in a quiet room and turn off my phone to avoid distractions. Sometimes it is hard to stay focused, but I take short breaks to <strong class="text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded cursor-pointer" onclick="event.stopPropagation(); playWordAudio('relax')">relax</strong>. Learning to learn makes schoolwork easier and more enjoyable!
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+            <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">
+              <i class="fa-solid fa-circle-question"></i>
+              <span>Extracting Information</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 mb-4">Reading Check &bull; فهم النص</h4>
+            
+            <div class="space-y-4">
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="text-xs font-bold text-blue-600 uppercase">Question 1</span>
+                <p class="text-sm font-semibold text-slate-800 mt-1">What are the three main different styles of learning?</p>
+                <div class="mt-2 text-xs font-medium text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200 flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                  <span><strong>Answer:</strong> Visual, auditory, and kinesthetic.</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="text-xs font-bold text-blue-600 uppercase">Question 2</span>
+                <p class="text-sm font-semibold text-slate-800 mt-1">What is Ahmed's strategy to avoid distractions?</p>
+                <div class="mt-2 text-xs font-medium text-slate-600 bg-white p-2.5 rounded-lg border border-slate-200 flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                  <span><strong>Answer:</strong> He studies in a quiet room and turns off his mobile phone.</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-amber-50/60 rounded-xl border border-amber-200">
+                <span class="text-xs font-bold text-amber-800 uppercase flex items-center gap-1">
+                  <i class="fa-regular fa-comments"></i> Speaking Practice
+                </span>
+                <p class="text-sm font-semibold text-slate-800 mt-1">What is your favorite style of learning and why?</p>
+                <textarea id="personalReflection" rows="2" placeholder="Type your personal answer here..." class="mt-2 w-full text-xs p-2.5 bg-white border border-amber-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-amber-500"></textarea>
+                <button onclick="savePersonalNote()" class="mt-2 text-xs font-bold bg-amber-500 hover:bg-amber-600 text-white px-3 py-1.5 rounded-lg transition shadow-sm">Save Note</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bilingual Quick Glossary Reference Card -->
+          <div class="bg-neutral-900 text-white rounded-2xl p-6 shadow-md border border-neutral-800">
+            <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-400 mb-3 flex items-center justify-between">
+              <span>Quick Glossary</span>
+              <span class="text-xs text-blue-400 font-medium">قائمة المفردات</span>
+            </h4>
+            <div class="space-y-2 text-xs max-h-80 overflow-y-auto custom-scrollbar pr-1">
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">different</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">مختلف</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">visual</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">بصري</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">chart</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">رسوم بيانية</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">organize</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">ينظم</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">auditory</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">سمعي</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">kinesthetic</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">حسي / حركي</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">experiment</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">تجارب علمية</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">method</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">طرق / أسلوب</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">skill</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">مهارات</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">memorize</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">يتذكر / يحفظ</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">schedule</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">جدول مواعيد</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-800">
+                <span class="font-semibold text-slate-200">relax</span>
+                <span class="text-neutral-400 font-sans" dir="rtl">يسترخي</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="section-exercises" class="tab-content hidden">
+      <div class="max-w-4xl mx-auto space-y-8">
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900">Exercises &bull; تدريبات الكلمات والفهم</h2>
+            <p class="text-sm text-slate-600 mt-1">Choose the right word or definition to complete each sentence accurately.</p>
+          </div>
+          <div class="flex items-center space-x-3 bg-slate-50 px-4 py-2 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold text-slate-500 uppercase">Your Score:</span>
+            <span id="quizScore" class="text-lg font-extrabold text-blue-600">0 / 6</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+          <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">
+            <span>Part 1</span>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-6">Choose the Right Word</h3>
+          
+          <div class="space-y-6" id="quizContainer"></div>
+
+          <div class="mt-8 pt-6 border-t border-slate-200 flex justify-between items-center">
+            <button onclick="resetQuiz()" class="text-sm font-semibold text-slate-500 hover:text-slate-800 transition">
+              <i class="fa-solid fa-rotate-left mr-1"></i> Reset Quiz
+            </button>
+            <button onclick="checkQuizAnswers()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-6 py-2.5 rounded-xl shadow transition">
+              Check Answers
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="section-flashcards" class="tab-content hidden">
+      <div class="max-w-xl mx-auto">
+        <div class="text-center mb-6">
+          <h2 class="text-2xl font-bold text-slate-900">Vocabulary Flashcards</h2>
+          <p class="text-sm text-slate-500 mt-1">Flip the card to check the definition, example sentence, and Arabic translation.</p>
+        </div>
+
+        <div class="relative w-full h-96 perspective cursor-pointer" onclick="flipCurrentCard()">
+          <div id="flashcardInner" class="card-inner w-full h-full relative rounded-2xl shadow-xl">
+            <!-- Front Card -->
+            <div class="card-front absolute inset-0 bg-white border-2 border-slate-200 rounded-2xl p-8 flex flex-col justify-between items-center text-center shadow-lg">
+              <div class="w-full flex justify-between items-center text-xs text-slate-400 font-bold uppercase tracking-wider">
+                <span id="fc-index">Word 1 of 12</span>
+                <span class="bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full border border-blue-100" id="fc-pos">adj.</span>
+              </div>
+
+              <div class="my-auto">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl shadow-sm" id="fc-icon">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <h3 class="text-4xl font-extrabold text-slate-900 tracking-tight" id="fc-word">visual</h3>
+                <p class="text-sm text-slate-500 font-mono mt-1" id="fc-phonetic">[víʒuəl]</p>
+              </div>
+
+              <div class="w-full flex justify-center items-center gap-3">
+                <button onclick="event.stopPropagation(); playCurrentCardAudio()" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition flex items-center gap-2">
+                  <i class="fa-solid fa-volume-high"></i> Pronounce
+                </button>
+                <span class="text-xs text-slate-400 flex items-center gap-1">
+                  <i class="fa-solid fa-repeat"></i> Click to flip
+                </span>
+              </div>
+            </div>
+
+            <!-- Back Card -->
+            <div class="card-back absolute inset-0 bg-slate-900 text-white rounded-2xl p-8 flex flex-col justify-between items-center text-center shadow-xl border border-neutral-800">
+              <div class="w-full flex justify-between items-center text-xs text-neutral-400 font-bold uppercase tracking-wider">
+                <span class="text-amber-400 font-bold">Meaning & Usage</span>
+                <span class="text-base text-blue-300 font-sans" id="fc-arabic" dir="rtl">بصري</span>
+              </div>
+
+              <div class="my-auto space-y-4">
+                <p class="text-lg text-neutral-100 font-medium leading-relaxed" id="fc-def">
+                  Related to seeing or sight.
+                </p>
+                <div class="p-3.5 bg-neutral-800/80 rounded-xl border border-neutral-700 text-left">
+                  <span class="text-[11px] font-bold text-amber-400 uppercase block mb-1">Example:</span>
+                  <p class="text-sm text-neutral-200 serif-text italic" id="fc-example">
+                    Visual learners often make maps and charts to organize information.
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full flex justify-center items-center gap-2">
+                <button onclick="event.stopPropagation(); playCurrentCardExampleAudio()" class="px-3.5 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-lg text-xs font-semibold transition border border-neutral-700 flex items-center gap-1.5">
+                  <i class="fa-solid fa-volume-high text-amber-400"></i> Read Example
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-between mt-6 px-2">
+          <button onclick="prevCard()" class="flex items-center space-x-2 text-sm font-bold bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 px-5 py-2.5 rounded-xl shadow-sm transition active:scale-95">
+            <i class="fa-solid fa-chevron-left text-xs"></i>
+            <span>Previous</span>
+          </button>
+          
+          <button onclick="shuffleCards()" class="p-2.5 text-slate-500 hover:text-slate-800 bg-white border border-slate-300 rounded-xl shadow-sm transition" title="Shuffle Cards">
+            <i class="fa-solid fa-shuffle"></i>
+          </button>
+
+          <button onclick="nextCard()" class="flex items-center space-x-2 text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl shadow-md transition active:scale-95">
+            <span>Next</span>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-extrabold text-slate-900 tracking-wider">4D ACADEMIC</span>
+        <span>&bull;</span>
+        <span>Unit 2: Different Ways People Learn</span>
+      </div>
+      <div>
+        <span>Pedagogy inspired by <em>4000 Essential English Words</em></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast message box -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-3 border border-neutral-700">
+      <i id="toastIcon" class="fa-solid fa-circle-check text-emerald-400"></i>
+      <span id="toastMsg" class="text-sm font-medium">Action completed</span>
+    </div>
+  </div>
+
+  <div id="cloudAudioWidget" class="fixed bottom-6 left-6 z-50 hidden transition-all duration-300">
+    <div class="bg-slate-950/95 backdrop-blur-md text-white border border-slate-700 px-4 py-2.5 rounded-2xl shadow-2xl flex items-center space-x-3">
+      <div class="relative flex items-center justify-center w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 border border-sky-500/30">
+        <i class="fa-solid fa-cloud text-sm animate-pulse"></i>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <span class="text-xs font-bold text-white tracking-wide">Cloud Voice Stream</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+        </div>
+        <div class="text-[11px] text-slate-400 font-mono flex items-center gap-1.5 mt-0.5">
+          <span id="cloudWidgetStatus">Playing stream...</span>
+          <span class="inline-flex items-end gap-0.5 h-3">
+            <span class="w-0.5 h-2 bg-sky-400 animate-[bounce_0.6s_infinite]"></span>
+            <span class="w-0.5 h-3 bg-sky-400 animate-[bounce_0.8s_infinite_0.2s]"></span>
+            <span class="w-0.5 h-1.5 bg-sky-400 animate-[bounce_0.7s_infinite_0.4s]"></span>
+          </span>
+        </div>
+      </div>
+      <button onclick="stopAllPlayback()" class="ml-2 p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition" title="Stop Audio">
+        <i class="fa-solid fa-stop text-xs"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const VOCABULARY_LIST = [
+      {
+        id: 1,
+        word: "different",
+        phonetic: "[dífərənt]",
+        pos: "adj.",
+        def: "Not the same as another or each other.",
+        example: "Every person learns in different ways.",
+        arabic: "مختلف",
+        icon: "fa-shapes"
+      },
+      {
+        id: 2,
+        word: "visual",
+        phonetic: "[víʒuəl]",
+        pos: "adj.",
+        def: "Related to seeing or sight.",
+        example: "Visual learners often make maps and charts to organize information.",
+        arabic: "بصري",
+        icon: "fa-eye"
+      },
+      {
+        id: 3,
+        word: "chart",
+        phonetic: "[tʃɑːrt]",
+        pos: "n.",
+        def: "A drawing that shows information in a simple and organized way.",
+        example: "Visual learners like to look at pictures and charts.",
+        arabic: "رسوم بيانية",
+        icon: "fa-chart-pie"
+      },
+      {
+        id: 4,
+        word: "organize",
+        phonetic: "[ɔ́ːrɡənaɪz]",
+        pos: "v.",
+        def: "To arrange things in an orderly and systematic way.",
+        example: "Ahmed organizes his study notes in folders so he can find them easily.",
+        arabic: "ينظم",
+        icon: "fa-folder-tree"
+      },
+      {
+        id: 5,
+        word: "auditory",
+        phonetic: "[ɔ́ːdətɔ̀ːri]",
+        pos: "adj.",
+        def: "Related to the sense of hearing or listening.",
+        example: "Auditory learners repeat information out loud to remember it.",
+        arabic: "سمعي",
+        icon: "fa-ear-listen"
+      },
+      {
+        id: 6,
+        word: "kinesthetic",
+        phonetic: "[kìnəsθétɪk]",
+        pos: "adj.",
+        def: "Learning best by carrying out physical activities, touching, and moving.",
+        example: "Kinesthetic learners use their hands and build models to help them think.",
+        arabic: "حسي / حركي",
+        icon: "fa-hands"
+      },
+      {
+        id: 7,
+        word: "experiment",
+        phonetic: "[ɪkspérəmənt]",
+        pos: "n.",
+        def: "A scientific test done in order to learn something new.",
+        example: "Kinesthetic students enjoy doing science experiments in school.",
+        arabic: "تجارب علمية",
+        icon: "fa-flask"
+      },
+      {
+        id: 8,
+        word: "method",
+        phonetic: "[méθəd]",
+        pos: "n.",
+        def: "A particular, planned way of doing something.",
+        example: "Choosing the right methods makes learning easier and more enjoyable.",
+        arabic: "طرق / أسلوب",
+        icon: "fa-route"
+      },
+      {
+        id: 9,
+        word: "skill",
+        phonetic: "[skɪl]",
+        pos: "n.",
+        def: "An ability to do an activity or job well, especially because you have practiced it.",
+        example: "Learning how to learn is one of the most important skills for students.",
+        arabic: "مهارات",
+        icon: "fa-star"
+      },
+      {
+        id: 10,
+        word: "memorize",
+        phonetic: "[méməraɪz]",
+        pos: "v.",
+        def: "To learn something so thoroughly that you can remember it perfectly from memory.",
+        example: "Good learners don't just memorize information—they truly understand it.",
+        arabic: "يتذكر / يحفظ",
+        icon: "fa-brain"
+      },
+      {
+        id: 11,
+        word: "schedule",
+        phonetic: "[skédʒuːl]",
+        pos: "n.",
+        def: "A plan of things to be done and when they will be done.",
+        example: "Ahmed makes a weekly study schedule to focus on one subject at a time.",
+        arabic: "جدول مواعيد",
+        icon: "fa-calendar-days"
+      },
+      {
+        id: 12,
+        word: "relax",
+        phonetic: "[rɪlǽks]",
+        pos: "v.",
+        def: "To rest and become less tense, anxious, or stressed.",
+        example: "When studying becomes difficult, he takes short breaks to relax.",
+        arabic: "يسترخي",
+        icon: "fa-mug-hot"
+      }
+    ];
+
+    let currentSpeechRate = 1.0;
+    let isNarratingStory = false;
+    let flashcardCurrentIndex = 0;
+    let shuffledVocab = [...VOCABULARY_LIST];
+
+    const cloudAudioBufferCache = new Map();
+    let globalAudioContext = null;
+    let currentActiveAudioSource = null;
+
+    let selectedVoiceConfig = {
+      name: "Achird",
+      label: "Achird • Warm Cloud",
+      promptPrefix: "Say in a warm, relaxed, humanized conversational tone, like a friendly and caring teacher speaking directly to their student: "
+    };
+
+    function getOrCreateAudioContext() {
+      if (!globalAudioContext) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        globalAudioContext = new AudioCtx();
+      }
+      if (globalAudioContext.state === 'suspended') {
+        globalAudioContext.resume();
+      }
+      return globalAudioContext;
+    }
+
+    ['click', 'touchstart'].forEach(evt => {
+      document.addEventListener(evt, () => {
+        try {
+          getOrCreateAudioContext();
+        } catch (e) {}
+      }, { once: true, passive: true });
+    });
+
+    function toggleVoiceMenu() {
+      const menu = document.getElementById('voiceDropdown');
+      menu.classList.toggle('hidden');
+    }
+
+    document.addEventListener('click', (e) => {
+      const btn = document.getElementById('voiceSelectorBtn');
+      const dropdown = document.getElementById('voiceDropdown');
+      if (dropdown && !dropdown.classList.contains('hidden') && !btn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+    function selectVoice(voiceName, label, promptPrefix) {
+      selectedVoiceConfig = {
+        name: voiceName,
+        label: label,
+        promptPrefix: promptPrefix
+      };
+
+      document.getElementById('activeVoiceLabel').innerText = label;
+      ['Achird', 'Callirrhoe', 'Puck', 'Aoede', 'Zephyr'].forEach(v => {
+        const checkIcon = document.getElementById(`check-${v}`);
+        if (checkIcon) {
+          if (v === voiceName) checkIcon.classList.remove('hidden');
+          else checkIcon.classList.add('hidden');
+        }
+      });
+
+      document.getElementById('voiceDropdown').classList.add('hidden');
+      showToast(`Switched cloud voice to ${label}`, "audio");
+      playEnergeticSpeech("Hi there! I'm speaking directly through the cloud.");
+    }
+
+    function toggleAudioSpeed() {
+      const speeds = [0.8, 1.0, 1.2];
+      const nextIdx = (speeds.indexOf(currentSpeechRate) + 1) % speeds.length;
+      currentSpeechRate = speeds[nextIdx];
+      document.getElementById('speedBtn').innerText = `${currentSpeechRate}x Speed`;
+      showToast(`Speech rate set to ${currentSpeechRate}x`);
+    }
+
+    function showCloudWidget(statusMsg = "Streaming from Cloud...") {
+      const widget = document.getElementById('cloudAudioWidget');
+      const label = document.getElementById('cloudWidgetStatus');
+      if (label) label.innerText = statusMsg;
+      if (widget) widget.classList.remove('hidden');
+    }
+
+    function hideCloudWidget() {
+      const widget = document.getElementById('cloudAudioWidget');
+      if (widget) widget.classList.add('hidden');
+    }
+
+    function stopAllPlayback() {
+      if (currentActiveAudioSource) {
+        try {
+          currentActiveAudioSource.stop();
+          currentActiveAudioSource.disconnect();
+        } catch (e) {}
+        currentActiveAudioSource = null;
+      }
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      
+      isNarratingStory = false;
+      document.querySelectorAll('.sentence').forEach(s => s.classList.remove('highlight-active'));
+      
+      hideCloudWidget();
+    }
+
+    async function playEnergeticSpeech(textToSpeak, onEndCallback = null) {
+      stopAllPlayback();
+
+      const dot = document.getElementById('voiceStatusDot');
+      if (dot) dot.classList.add('animate-ping');
+      showCloudWidget("Streaming cloud audio...");
+
+      const finalizePlayback = () => {
+        if (dot) dot.classList.remove('animate-ping');
+        hideCloudWidget();
+        if (onEndCallback) onEndCallback();
+      };
+
+      const cacheKey = `${selectedVoiceConfig.name}_${textToSpeak}`;
+      const audioCtx = getOrCreateAudioContext();
+
+      if (cloudAudioBufferCache.has(cacheKey)) {
+        try {
+          const cachedBuffer = cloudAudioBufferCache.get(cacheKey);
+          playAudioBuffer(cachedBuffer, finalizePlayback);
+          return;
+        } catch (err) {}
+      }
+
+      const apiKey = ""; // Canvas will automatically provide the key in runtime if left empty
+      
+      let attempts = 0;
+      const maxAttempts = 2;
+      let delay = 800;
+
+      while (attempts < maxAttempts) {
+        try {
+          const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+          
+          const payload = {
+            contents: [{
+              parts: [{ text: `${selectedVoiceConfig.promptPrefix}${textToSpeak}` }]
+            }],
+            generationConfig: {
+              responseModalities: ["AUDIO"],
+              speechConfig: {
+                voiceConfig: {
+                  prebuiltVoiceConfig: { voiceName: selectedVoiceConfig.name }
+                }
+              }
+            }
+          };
+
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 6500);
+
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
+          if (!response.ok) {
+            throw new Error(`Cloud TTS response status: ${response.status}`);
+          }
+
+          const result = await response.json();
+          const part = result?.candidates?.[0]?.content?.parts?.[0];
+          const audioData = part?.inlineData?.data;
+          const mimeType = part?.inlineData?.mimeType;
+
+          if (audioData && mimeType && mimeType.startsWith("audio/")) {
+            const rateMatch = mimeType.match(/rate=(\d+)/);
+            const sampleRate = rateMatch ? parseInt(rateMatch[1], 10) : 24000;
+            const pcmData = base64ToArrayBuffer(audioData);
+            const pcm16 = new Int16Array(pcmData);
+
+            const audioBuffer = audioCtx.createBuffer(1, pcm16.length, sampleRate);
+            const channelData = audioBuffer.getChannelData(0);
+            for (let i = 0; i < pcm16.length; i++) {
+              channelData[i] = pcm16[i] / 32768.0;
+            }
+
+            cloudAudioBufferCache.set(cacheKey, audioBuffer);
+            playAudioBuffer(audioBuffer, finalizePlayback);
+            return;
+          }
+        } catch (err) {
+          attempts++;
+          if (attempts < maxAttempts) {
+            await new Promise(r => setTimeout(r, delay));
+            delay *= 2;
+          }
+        }
+      }
+
+      fallbackClientSpeech(textToSpeak, finalizePlayback);
+    }
+
+    function playAudioBuffer(audioBuffer, onEndCallback) {
+      const audioCtx = getOrCreateAudioContext();
+      const source = audioCtx.createBufferSource();
+      source.buffer = audioBuffer;
+      source.playbackRate.value = currentSpeechRate;
+
+      source.onended = () => {
+        currentActiveAudioSource = null;
+        if (onEndCallback) onEndCallback();
+      };
+
+      currentActiveAudioSource = source;
+      source.connect(audioCtx.destination);
+      source.start();
+    }
+
+    function fallbackClientSpeech(text, onEndCallback) {
+      if (!('speechSynthesis' in window)) {
+        showToast("Audio speech not supported in this browser.", "warning");
+        if (onEndCallback) onEndCallback();
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = currentSpeechRate * 0.95;
+      utterance.pitch = 1.0;
+
+      const voices = window.speechSynthesis.getVoices();
+      const naturalVoice = voices.find(v => 
+        (v.name.includes('Natural') || v.name.includes('Neural') || v.name.includes('Online') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Jenny') || v.name.includes('Guy') || v.name.includes('Daniel') || v.name.includes('Arthur')) && v.lang.startsWith('en')
+      ) || voices.find(v => v.lang.startsWith('en-US')) || voices.find(v => v.lang.startsWith('en'));
+
+      if (naturalVoice) utterance.voice = naturalVoice;
+
+      utterance.onend = () => {
+        if (onEndCallback) onEndCallback();
+      };
+      utterance.onerror = (e) => {
+        console.warn("Local speech synthesis error:", e);
+        if (onEndCallback) onEndCallback();
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
+    }
+
+    function base64ToArrayBuffer(base64) {
+      const binaryString = window.atob(base64);
+      const len = binaryString.length;
+      const bytes = new Uint8Array(len);
+      for (let i = 0; i < len; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+      return bytes.buffer;
+    }
+
+    function renderWordList(items = VOCABULARY_LIST) {
+      const grid = document.getElementById('wordGrid');
+      if (!grid) return;
+
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-400">
+            <i class="fa-solid fa-magnifying-glass text-3xl mb-3"></i>
+            <p class="text-sm">No vocabulary words matching your query.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = items.map(item => `
+        <div class="word-card bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between relative group hover:border-blue-400">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-baseline space-x-2">
+                <span class="text-xs font-extrabold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100">${item.id}</span>
+                <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">${item.word}</h3>
+                <span class="text-xs font-mono text-slate-400">${item.phonetic}</span>
+                <span class="text-xs italic font-medium text-slate-500">${item.pos}</span>
+              </div>
+              <span class="text-xs font-semibold text-neutral-400 font-sans" dir="rtl">${item.arabic}</span>
+            </div>
+
+            <p class="text-sm text-slate-700 mt-3.5 leading-relaxed">
+              ${item.def}
+            </p>
+
+            <div class="mt-4 p-3 bg-slate-50 rounded-xl border border-slate-100/80">
+              <p class="text-xs text-slate-600 italic serif-text">
+                "${highlightWordInSentence(item.example, item.word)}"
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <button onclick="playWordAudio('${item.word}')" class="flex items-center space-x-2 text-xs font-bold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition active:scale-95">
+              <i class="fa-solid fa-volume-high"></i>
+              <span>Word & Sentence</span>
+            </button>
+            <button onclick="speakText('${item.word}')" class="text-xs text-slate-400 hover:text-slate-700 transition" title="Pronounce word only">
+              <i class="fa-solid fa-comment-dots mr-1"></i> Word Only
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function highlightWordInSentence(sentence, targetWord) {
+      const regex = new RegExp(`(${targetWord}[a-z]*)`, 'gi');
+      return sentence.replace(regex, '<strong class="font-bold text-blue-700 not-italic">$1</strong>');
+    }
+
+    function filterWords() {
+      const query = document.getElementById('wordSearch').value.toLowerCase().trim();
+      const filtered = VOCABULARY_LIST.filter(item => 
+        item.word.toLowerCase().includes(query) || 
+        item.arabic.includes(query) ||
+        item.def.toLowerCase().includes(query)
+      );
+      renderWordList(filtered);
+    }
+
+    function playWordAudio(wordStr) {
+      const item = VOCABULARY_LIST.find(w => w.word.toLowerCase() === wordStr.toLowerCase());
+      if (!item) {
+        speakText(wordStr);
+        return;
+      }
+      playEnergeticSpeech(`${item.word}. ${item.example}`);
+      showToast(`Playing: ${item.word}`, "audio");
+    }
+
+    function speakText(rawText) {
+      if (!rawText) return;
+      playEnergeticSpeech(rawText);
+    }
+
+    function testHumanizedVoice() {
+      playEnergeticSpeech("Welcome to 4D Academic. Notice how clear, expressive, and humanized this cloud voice sounds!");
+    }
+
+    let isPlayingAll = false;
+    async function playAllWordsSequentially() {
+      const btn = document.getElementById('playAllBtn');
+      if (isPlayingAll) {
+        stopAllPlayback();
+        isPlayingAll = false;
+        btn.innerHTML = `<i class="fa-solid fa-play text-amber-400"></i><span>Listen to Word List</span>`;
+        return;
+      }
+
+      isPlayingAll = true;
+      btn.innerHTML = `<i class="fa-solid fa-stop text-rose-400"></i><span>Stop List</span>`;
+
+      for (let i = 0; i < VOCABULARY_LIST.length; i++) {
+        if (!isPlayingAll) break;
+        const item = VOCABULARY_LIST[i];
+        showToast(`Playing #${i+1}: ${item.word}`, "audio");
+        await new Promise(resolve => {
+          playEnergeticSpeech(`${item.word}. ${item.example}`, () => {
+            setTimeout(resolve, 800);
+          });
+        });
+      }
+
+      isPlayingAll = false;
+      btn.innerHTML = `<i class="fa-solid fa-play text-amber-400"></i><span>Listen to Word List</span>`;
+    }
+
+    function narratePassage(storyKey) {
+      stopNarration();
+      const containerId = storyKey === 'story1' ? 'story1-text' : 'story2-text';
+      const container = document.getElementById(containerId);
+      const sentences = container.querySelectorAll('.sentence');
+
+      if (!sentences || sentences.length === 0) return;
+
+      isNarratingStory = true;
+      let currentIndex = 0;
+
+      const playNextSentence = () => {
+        if (!isNarratingStory || currentIndex >= sentences.length) {
+          stopNarration();
+          return;
+        }
+
+        sentences.forEach(s => s.classList.remove('highlight-active'));
+        
+        const currentSentence = sentences[currentIndex];
+        currentSentence.classList.add('highlight-active');
+        currentSentence.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        playEnergeticSpeech(currentSentence.innerText, () => {
+          currentIndex++;
+          setTimeout(playNextSentence, 400);
+        });
+      };
+
+      playNextSentence();
+      showToast("Cloud narration started. Tap stop to pause.", "audio");
+    }
+
+    function stopNarration() {
+      stopAllPlayback();
+    }
+
+    const QUIZ_QUESTIONS = [
+      {
+        question: "People who learn best by looking at pictures, diagrams, and colored notes are called:",
+        options: ["auditory learners", "visual learners", "kinesthetic learners"],
+        answer: 1,
+        hint: "They prefer seeing information."
+      },
+      {
+        question: "Ahmed organizes his notes in __________ so he can find them quickly.",
+        options: ["folders", "experiments", "schedules"],
+        answer: 0,
+        hint: "A place where loose papers and documents are kept."
+      },
+      {
+        question: "Good learners don't just __________ facts; they truly understand the material.",
+        options: ["relax", "memorize", "different"],
+        answer: 1,
+        hint: "To store words strictly in memory without understanding."
+      },
+      {
+        question: "Kinesthetic learners prefer to learn by doing __________ and moving around.",
+        options: ["charts", "auditory", "experiments"],
+        answer: 2,
+        hint: "Hands-on scientific tests and activities."
+      },
+      {
+        question: "To prevent distractions while studying, Ahmed chooses to __________.",
+        options: ["turn off his phone", "listen to loud music", "stop making schedules"],
+        answer: 0,
+        hint: "He studies in a quiet room and shuts down devices."
+      },
+      {
+        question: "When studying becomes difficult, taking short breaks to __________ restores focus.",
+        options: ["organize", "relax", "memorize"],
+        answer: 1,
+        hint: "To rest and release tension."
+      }
+    ];
+
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      if (!container) return;
+
+      container.innerHTML = QUIZ_QUESTIONS.map((q, idx) => `
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50" id="quiz-card-${idx}">
+          <p class="text-sm font-bold text-slate-900 mb-3">${idx + 1}. ${q.question}</p>
+          <div class="space-y-2">
+            ${q.options.map((opt, oIdx) => `
+              <label class="flex items-center space-x-3 p-3 bg-white rounded-lg border border-slate-200 cursor-pointer hover:bg-blue-50/50 transition">
+                <input type="radio" name="quiz-q-${idx}" value="${oIdx}" class="text-blue-600 focus:ring-blue-500 h-4 w-4">
+                <span class="text-xs font-medium text-slate-700">${opt}</span>
+              </label>
+            `).join('')}
+          </div>
+          <div id="quiz-feedback-${idx}" class="mt-2 text-xs font-semibold hidden"></div>
+        </div>
+      `).join('');
+    }
+
+    function checkQuizAnswers() {
+      let score = 0;
+      QUIZ_QUESTIONS.forEach((q, idx) => {
+        const selected = document.querySelector(`input[name="quiz-q-${idx}"]:checked`);
+        const feedback = document.getElementById(`quiz-feedback-${idx}`);
+        const card = document.getElementById(`quiz-card-${idx}`);
+
+        feedback.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+        card.classList.remove('border-emerald-300', 'border-rose-300');
+
+        if (selected && parseInt(selected.value) === q.answer) {
+          score++;
+          feedback.innerHTML = `<i class="fa-solid fa-check mr-1"></i> Correct! Well done.`;
+          feedback.classList.add('text-emerald-600');
+          card.classList.add('border-emerald-300');
+        } else {
+          feedback.innerHTML = `<i class="fa-solid fa-xmark mr-1"></i> Incorrect. Correct answer: <strong>${q.options[q.answer]}</strong>`;
+          feedback.classList.add('text-rose-600');
+          card.classList.add('border-rose-300');
+        }
+      });
+
+      document.getElementById('quizScore').innerText = `${score} / ${QUIZ_QUESTIONS.length}`;
+      showToast(`Quiz completed! You scored ${score}/${QUIZ_QUESTIONS.length}`);
+    }
+
+    function resetQuiz() {
+      document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+      QUIZ_QUESTIONS.forEach((_, idx) => {
+        const feedback = document.getElementById(`quiz-feedback-${idx}`);
+        const card = document.getElementById(`quiz-card-${idx}`);
+        if (feedback) feedback.classList.add('hidden');
+        if (card) card.classList.remove('border-emerald-300', 'border-rose-300');
+      });
+      document.getElementById('quizScore').innerText = `0 / ${QUIZ_QUESTIONS.length}`;
+      showToast("Quiz reset successfully.");
+    }
+
+    function updateFlashcardDisplay() {
+      const card = shuffledVocab[flashcardCurrentIndex];
+      if (!card) return;
+
+      const inner = document.getElementById('flashcardInner');
+      inner.classList.remove('is-flipped');
+
+      document.getElementById('fc-index').innerText = `Word ${flashcardCurrentIndex + 1} of ${shuffledVocab.length}`;
+      document.getElementById('fc-pos').innerText = card.pos;
+      document.getElementById('fc-word').innerText = card.word;
+      document.getElementById('fc-phonetic').innerText = card.phonetic;
+      document.getElementById('fc-icon').innerHTML = `<i class="fa-solid ${card.icon}"></i>`;
+      
+      document.getElementById('fc-arabic').innerText = card.arabic;
+      document.getElementById('fc-def').innerText = card.def;
+      document.getElementById('fc-example').innerText = `"${card.example}"`;
+    }
+
+    function flipCurrentCard() {
+      const inner = document.getElementById('flashcardInner');
+      inner.classList.toggle('is-flipped');
+    }
+
+    function nextCard() {
+      flashcardCurrentIndex = (flashcardCurrentIndex + 1) % shuffledVocab.length;
+      updateFlashcardDisplay();
+    }
+
+    function prevCard() {
+      flashcardCurrentIndex = (flashcardCurrentIndex - 1 + shuffledVocab.length) % shuffledVocab.length;
+      updateFlashcardDisplay();
+    }
+
+    function shuffleCards() {
+      shuffledVocab = [...shuffledVocab].sort(() => Math.random() - 0.5);
+      flashcardCurrentIndex = 0;
+      updateFlashcardDisplay();
+      showToast("Flashcards shuffled!");
+    }
+
+    function playCurrentCardAudio() {
+      const card = shuffledVocab[flashcardCurrentIndex];
+      playEnergeticSpeech(card.word);
+    }
+
+    function playCurrentCardExampleAudio() {
+      const card = shuffledVocab[flashcardCurrentIndex];
+      playEnergeticSpeech(card.example);
+    }
+
+    function switchTab(tabId) {
+      stopAllPlayback();
+
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      const activeSection = document.getElementById(`section-${tabId}`);
+      if (activeSection) activeSection.classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+        btn.classList.add('text-neutral-400');
+      });
+
+      const activeBtn = document.getElementById(`tabBtn-${tabId}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-neutral-400');
+        activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+      }
+
+      ['wordlist', 'reading', 'exercises', 'flashcards'].forEach(t => {
+        const mob = document.getElementById(`mobile-tabBtn-${t}`);
+        if (mob) {
+          if (t === tabId) {
+            mob.classList.remove('text-neutral-300', 'bg-neutral-900');
+            mob.classList.add('text-white', 'bg-blue-600');
+          } else {
+            mob.classList.add('text-neutral-300', 'bg-neutral-900');
+            mob.classList.remove('text-white', 'bg-blue-600');
+          }
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showToast(msg, type = "info") {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      const toastIcon = document.getElementById('toastIcon');
+
+      if (!toast || !toastMsg) return;
+
+      toastMsg.innerText = msg;
+      if (type === "audio") {
+        toastIcon.className = "fa-solid fa-volume-high text-sky-400";
+      } else {
+        toastIcon.className = "fa-solid fa-circle-check text-emerald-400";
+      }
+
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+
+    function savePersonalNote() {
+      const text = document.getElementById('personalReflection').value;
+      if (!text.trim()) {
+        showToast("Please type a note first.");
+        return;
+      }
+      showToast("Note saved to study session!");
+    }
+
+    window.onload = function() {
+      renderWordList();
+      renderQuiz();
+      updateFlashcardDisplay();
+    };
+  </script>
+</body>
+</html>
